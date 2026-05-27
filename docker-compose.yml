@@ -4,7 +4,7 @@ services:
     container_name: postgres-db
     hostname: postgres-db
     environment:
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_PASSWORD: 
       POSTGRES_DB: postgres
       POSTGRES_USER: postgres
     ports:
@@ -26,8 +26,8 @@ services:
     ports:
       - "8000:8000"
     environment:
-      - DATABASE_URL=postgresql://postgres:postgres@postgres-db:5432/postgres
-      - GEMINI_API_KEY=AIzaSyC7N0rgnArE33FTAx1woby-lS6cMZDFeYw
+      - DATABASE_URL=postgresql://postgres:urpassword@postgres-db:5432/postgres
+      - GEMINI_API_KEY=
     restart: on-failure
 
 volumes:
